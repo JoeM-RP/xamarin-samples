@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="samples.core.Views.RadioButtonView" Title="Radio Buttons">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ListView x:Name="ListView_Radio" ItemTapped="Handle_ItemTapped" ItemSelected="Handle_ItemSelected" IsGroupingEnabled="true" HasUnevenRows="true">
         <!-- Header -->
         <ListView.Header>
@@ -36,7 +31,7 @@
         <!-- Footer -->
         <ListView.Footer>
             <StackLayout Margin="10,15">
-                <Button Text="Apply" HorizontalOptions="Center" WidthRequest="150"/>
+                <Button Text="Submit" HorizontalOptions="Center" WidthRequest="150" Clicked="Handle_Clicked"/>
             </StackLayout>
         </ListView.Footer>
     </ListView>

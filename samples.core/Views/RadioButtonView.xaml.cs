@@ -21,6 +21,12 @@ namespace samples.core.Views
             Initialize();
         }
 
+        public async void Handle_Clicked(object sender, EventArgs e)
+        {
+            await this.DisplayAlert("", "Your selections have been saved", "OK");
+            Initialize();
+        }
+
         /// <summary>
         /// Handles the item tapped.
         /// </summary>
