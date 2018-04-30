@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="samples.core.App">
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            
+            <!-- Colors -->
+            <Color x:Key="BrandColor">#394A76</Color>
+            <Color x:Key="BrandAccentColor">#87A3BA</Color>
+            <Color x:Key="Red">#E4002B</Color>
+            <Color x:Key="PowderBlue">#87A3BA</Color>
+            <Color x:Key="Yellow">#FFBF19</Color>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="LightGray">#F4F4F4</Color>
+            <Color x:Key="Gray">#DBDBDD</Color>
+            <Color x:Key="MediumGray">#BABCBF</Color>
+            <Color x:Key="SteelGray">#6D6D70</Color>
+            <Color x:Key="Black">#000000</Color>
+            
+            <!-- Activity Indicator -->
+            <Style TargetType="ActivityIndicator">
+                <Setter Property="Color" Value="{StaticResource BrandAccentColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="IsRunning" Value="{Binding IsBusy}" />
+            </Style>
+            
+            <!-- Button -->
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource SteelGray}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Gray}" />
+                <Setter Property="BorderColor" Value="{StaticResource Gray}" />
+            </Style>
+            <Style x:Key="BrandButton" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BrandColor}" />
+                <Setter Property="BorderColor" Value="{StaticResource BrandColor}" />
+            </Style>
+            
+            <!-- BoxView -->
+            <Style x:Key="DividerBoxView" TargetType="BoxView">
+                <Setter Property="Color" Value="{StaticResource MediumGray}" />
+                <Setter Property="HeightRequest" Value="1" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
