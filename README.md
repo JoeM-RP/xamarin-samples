@@ -2,5 +2,5 @@
 
 A collection of samples demonstrating neat things in Xamarin.Forms
 
-Index:
+## Index:
 * Radio Buttons
