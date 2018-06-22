@@ -8,7 +8,7 @@ namespace samples.core
         {
             InitializeComponent();
 
-            MainPage = new Views.RadioButtonView();
+            MainPage = new Views.EntryMoveNextView();
         }
 
         protected override void OnStart()

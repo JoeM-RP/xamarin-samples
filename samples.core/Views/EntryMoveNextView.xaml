@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="samples.core.Views.EntryMoveNextView" 
+             xmlns:ctrl="clr-namespace:samples.core.Controls;assembly=samples.core">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Name="MyEntry" TargetType="Entry">
+                <Setter Property="HeightRequest" Value="45" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="15,25">
+            <ctrl:EntryMoveNextControl x:Name="Entry_First" Placeholder="First Entry" HeightRequest="45"/>
+            <ctrl:EntryMoveNextControl x:Name="Entry_Second" Placeholder="Second Entry" HeightRequest="45"/>
+            <ctrl:EntryMoveNextControl x:Name="Entry_Third" Placeholder="Third Entry" HeightRequest="45" />
+            <BoxView/>
+            <Button Text="Save" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

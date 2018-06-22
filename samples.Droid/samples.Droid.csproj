@@ -119,6 +119,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Effects\Effects.cs" />
     <Compile Include="Effects\ListViewSelectNoneEffect.cs" />
+    <Compile Include="Effects\EntryMoveNextEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -125,6 +125,7 @@
     <Compile Include="Effects\Effects.cs" />
     <Compile Include="Effects\ListViewSelectNoneEffect.cs" />
     <Compile Include="Effects\ListViewSelectMultipleEffect.cs" />
+    <Compile Include="Effects\EntryMoveNextEffect.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.1.444934\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.1.444934\build\netstandard1.0\Xamarin.Forms.targets')" />
