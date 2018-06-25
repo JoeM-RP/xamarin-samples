@@ -20,7 +20,8 @@ namespace samples.iOS.Effects
 
             // Add the "done" button to the toolbar easily dismiss the keyboard
             // when it may not have a return key
-            if (entry.KeyboardType == UIKeyboardType.NumberPad)
+            if (entry.KeyboardType == UIKeyboardType.DecimalPad || 
+                entry.KeyboardType == UIKeyboardType.NumberPad)
             {
                 entry.InputAccessoryView = BuildDismiss();
             }
@@ -31,11 +32,6 @@ namespace samples.iOS.Effects
             if (base.Element is EntryMoveNextControl xfControl && xfControl.NextEntry != null)
             {
                 entry.ReturnKeyType = UIReturnKeyType.Next;
-                entry.ShouldReturn += (textField) => 
-                {
-                    xfControl.OnNext();
-                    return true;
-                };
             }
         }
 
@@ -48,10 +44,22 @@ namespace samples.iOS.Effects
         {
             var toolbar = new UIToolbar(new CGRect(0.0f, 0.0f, Control.Frame.Size.Width, 44.0f));
 
+            // Set default state of buttonAction/appearance
+            UIBarButtonItem buttonAction = new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate { Control.ResignFirstResponder(); });
+
+            // If we have a next element, swap out the default state for "Next"
+            if (base.Element is EntryMoveNextControl xfControl && xfControl.NextEntry != null)
+            {
+                buttonAction = new UIBarButtonItem("Next", UIBarButtonItemStyle.Plain, delegate
+                {
+                    xfControl.OnNext();
+                });
+            }
+
             toolbar.Items = new[]
             {
                 new UIBarButtonItem(UIBarButtonSystemItem.FlexibleSpace),
-                new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate { Control.ResignFirstResponder(); })
+                buttonAction,
             };
 
             return toolbar;

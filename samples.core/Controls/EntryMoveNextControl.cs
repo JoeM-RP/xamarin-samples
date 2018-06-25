@@ -16,6 +16,11 @@ namespace samples.core.Controls
         protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             base.OnPropertyChanged(propertyName);
+
+            this.Completed += (sender, e) => 
+            {
+                this.OnNext();
+            };
         }
 
         public void OnNext()

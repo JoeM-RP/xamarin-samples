@@ -14,7 +14,7 @@
         <StackLayout Padding="15,25">
             <ctrl:EntryMoveNextControl x:Name="Entry_First" Placeholder="First Entry" HeightRequest="45"/>
             <ctrl:EntryMoveNextControl x:Name="Entry_Second" Placeholder="Second Entry" HeightRequest="45"/>
-            <ctrl:EntryMoveNextControl x:Name="Entry_Third" Placeholder="Third Entry" HeightRequest="45" />
+            <ctrl:EntryMoveNextControl x:Name="Entry_Third" Placeholder="Third Entry" HeightRequest="45"/>
             <BoxView/>
             <Button Text="Save" VerticalOptions="End"/>
         </StackLayout>
