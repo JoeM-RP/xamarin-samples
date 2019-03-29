@@ -11,13 +11,8 @@ namespace samples.core.Views
         {
             InitializeComponent();
 
-            Entry_First.Effects.Add(Effect.Resolve("Effects.EntryMoveNextEffect"));
-            Entry_First.NextEntry = Entry_Second;
-
-            Entry_Second.Effects.Add(Effect.Resolve("Effects.EntryMoveNextEffect"));
-            Entry_Second.NextEntry = Entry_Third;
-
-            Entry_Third.Effects.Add(Effect.Resolve("Effects.EntryMoveNextEffect"));
+            Entry_First.ReturnCommand = new Command(() => Entry_Second.Focus());
+            Entry_Second.ReturnCommand = new Command(() => Entry_Third.Focus());
         }
     }
 }

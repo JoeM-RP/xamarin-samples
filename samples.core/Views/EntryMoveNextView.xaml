@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
+             xmlns:controls="clr-namespace:samples.core.Controls;assembly=samples.core"
              x:Class="samples.core.Views.EntryMoveNextView" 
              xmlns:ctrl="clr-namespace:samples.core.Controls;assembly=samples.core">
     <ContentPage.Resources>
@@ -12,9 +14,14 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Padding="15,25">
-            <ctrl:EntryMoveNextControl x:Name="Entry_First" Placeholder="First Entry" HeightRequest="45"/>
-            <ctrl:EntryMoveNextControl x:Name="Entry_Second" Placeholder="Second Entry" HeightRequest="45"/>
-            <ctrl:EntryMoveNextControl x:Name="Entry_Third" Placeholder="Third Entry" HeightRequest="45"/>
+            <Entry x:Name="Entry_First" ReturnType="Next" Placeholder="First Entry" HeightRequest="45"/>
+            <Entry x:Name="Entry_Second" ReturnType="Next" Placeholder="Second Entry" HeightRequest="45"/>
+            <Entry x:Name="Entry_Third" ReturnType="Done" Placeholder="Third Entry" HeightRequest="45"/>
+            <ios:UIPickerView>
+                <!-- Manipulate UIPickerView Properties Here -->
+            </ios:UIPickerView>
+            <View x:Name="UIPickerContainer"/>
+            <controls:MultiPickerControl x:Name="MultiPicker"/>
             <BoxView/>
             <Button Text="Save" VerticalOptions="End"/>
         </StackLayout>
