@@ -20,7 +20,6 @@
             <ios:UIPickerView>
                 <!-- Manipulate UIPickerView Properties Here -->
             </ios:UIPickerView>
-            <View x:Name="UIPickerContainer"/>
             <controls:MultiPickerControl x:Name="MultiPicker"/>
             <BoxView/>
             <Button Text="Save" VerticalOptions="End"/>
