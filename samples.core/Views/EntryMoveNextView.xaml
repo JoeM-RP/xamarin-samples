@@ -3,26 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
              xmlns:controls="clr-namespace:samples.core.Controls;assembly=samples.core"
-             x:Class="samples.core.Views.EntryMoveNextView" 
-             xmlns:ctrl="clr-namespace:samples.core.Controls;assembly=samples.core">
+             x:Class="samples.core.Views.EntryMoveNextView">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Name="MyEntry" TargetType="Entry">
                 <Setter Property="HeightRequest" Value="45" />
             </Style>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="-15,20,-15,0"/>
+                <Setter Property="Padding" Value="15,4"/>
+                <Setter Property="BackgroundColor" Value="#cdcdcd"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout Padding="15,25">
+            <Label Text="Next Entry Label Sample"/>
             <Entry x:Name="Entry_First" ReturnType="Next" Placeholder="First Entry" HeightRequest="45"/>
             <Entry x:Name="Entry_Second" ReturnType="Next" Placeholder="Second Entry" HeightRequest="45"/>
             <Entry x:Name="Entry_Third" ReturnType="Done" Placeholder="Third Entry" HeightRequest="45"/>
+            <!--
+            <Label Text="UIPickerView Sample"/>
             <ios:UIPickerView>
-                <!-- Manipulate UIPickerView Properties Here -->
+                 Manipulate UIPickerView Properties Here
             </ios:UIPickerView>
+            -->
+            <Label Text="MultiPickerControl Sample"/>
             <controls:MultiPickerControl x:Name="MultiPicker"/>
             <BoxView/>
             <Button Text="Save" VerticalOptions="End"/>
         </StackLayout>
+            </ScrollView>
     </ContentPage.Content>
 </ContentPage>

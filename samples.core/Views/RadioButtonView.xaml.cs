@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using samples.core.Models;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using System.Collections.ObjectModel;
 
@@ -16,7 +17,7 @@ namespace samples.core.Views
         {
             InitializeComponent();
 
-            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
+            On<iOS>().SetUseSafeArea(true);
 
             Initialize();
         }

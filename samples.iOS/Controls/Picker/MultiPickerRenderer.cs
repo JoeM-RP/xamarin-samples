@@ -18,8 +18,9 @@ namespace samples.iOS.Controls.Picker
     /// </remarks>
     public class MultiPickerRenderer : ViewRenderer
     {
+        static UILabel pickerLabel;
         static UIPickerView pickerControl;
-        static PeopleModel pickerModel = new PeopleModel(new UILabel());
+        static PeopleModel pickerModel = new PeopleModel();
 
         public MultiPickerRenderer()
         {
@@ -32,6 +33,8 @@ namespace samples.iOS.Controls.Picker
             {
                 Model = pickerModel
             };
+
+            pickerLabel = new UILabel();
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<View> e)

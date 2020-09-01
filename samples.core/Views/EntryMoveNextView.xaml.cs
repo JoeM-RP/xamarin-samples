@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 using Xamarin.Forms;
 
@@ -13,6 +15,9 @@ namespace samples.core.Views
 
             Entry_First.ReturnCommand = new Command(() => Entry_Second.Focus());
             Entry_Second.ReturnCommand = new Command(() => Entry_Third.Focus());
+
+
+            On<iOS>().SetUseSafeArea(true);
         }
     }
 }
