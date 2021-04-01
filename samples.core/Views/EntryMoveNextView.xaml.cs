@@ -14,7 +14,11 @@ namespace samples.core.Views
             InitializeComponent();
 
             Entry_First.ReturnCommand = new Command(() => Entry_Second.Focus());
-            Entry_Second.ReturnCommand = new Command(() => Entry_Third.Focus());
+
+            // Custom entry "Next" behavior
+            Entry_Second.NextEntry = Entry_Third;
+            Entry_Second.Effects.Add(Effect.Resolve("Effects.EntryMoveNextEffect"));
+            // end
 
 
             On<iOS>().SetUseSafeArea(true);

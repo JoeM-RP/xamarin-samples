@@ -19,18 +19,23 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout Padding="15,25">
+            <!-- ***************** -->
+            <!-- Next Entry Sample -->
+            <!-- ***************** -->
             <Label Text="Next Entry Label Sample"/>
             <Entry x:Name="Entry_First" ReturnType="Next" Placeholder="First Entry" HeightRequest="45"/>
-            <Entry x:Name="Entry_Second" ReturnType="Next" Placeholder="Second Entry" HeightRequest="45"/>
+
+            <!-- Custom Entry with Toolbar Command -->
+            <controls:EntryMoveNextControl x:Name="Entry_Second" Placeholder="Second Entry" HeightRequest="45" Keyboard="Numeric" />
+
             <Entry x:Name="Entry_Third" ReturnType="Done" Placeholder="Third Entry" HeightRequest="45"/>
-            <!--
-            <Label Text="UIPickerView Sample"/>
-            <ios:UIPickerView>
-                 Manipulate UIPickerView Properties Here
-            </ios:UIPickerView>
-            -->
+
+            <!-- ******************* -->
+            <!-- Multi-Picker Sample -->
+            <!-- ******************* -->
             <Label Text="MultiPickerControl Sample"/>
             <controls:MultiPickerControl x:Name="MultiPicker"/>
+
             <BoxView/>
             <Button Text="Save" VerticalOptions="End"/>
         </StackLayout>
