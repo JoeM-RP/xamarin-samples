@@ -4,6 +4,7 @@ using Xamarin.Forms.Platform.iOS;
 using UIKit;
 using CoreGraphics;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 [assembly: ExportRenderer(typeof(samples.core.Controls.MultiPickerControl), typeof(samples.iOS.Controls.Picker.MultiPickerRenderer))]
 namespace samples.iOS.Controls.Picker
@@ -18,9 +19,8 @@ namespace samples.iOS.Controls.Picker
     /// </remarks>
     public class MultiPickerRenderer : ViewRenderer
     {
-        static UILabel pickerLabel;
         static UIPickerView pickerControl;
-        static PeopleModel pickerModel = new PeopleModel();
+        static DemoModel pickerModel = new DemoModel();
 
         public MultiPickerRenderer()
         {
@@ -33,8 +33,6 @@ namespace samples.iOS.Controls.Picker
             {
                 Model = pickerModel
             };
-
-            pickerLabel = new UILabel();
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<View> e)
